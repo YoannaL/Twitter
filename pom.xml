@@ -8,11 +8,11 @@
 		<version>2.2.1.RELEASE</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>Twitter</groupId>
-	<artifactId>Twitter</artifactId>
+	<groupId>sda.mvc.Twitter</groupId>
+	<artifactId>sda.mvc.Twitter</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Twitter</name>
-	<description>Twitter</description>
+	<name>sda.mvc.Twitter</name>
+	<description>sda.mvc.Twitter</description>
 
 	<properties>
 		<java.version>1.8</java.version>
@@ -22,6 +22,15 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.modelmapper</groupId>
+			<artifactId>modelmapper</artifactId>
+			<version>2.3.5</version>
 		</dependency>
 
 		<dependency>
