@@ -6,9 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 import sda.mvc.Twitter.model.dto.UserDTO;
+import sda.mvc.Twitter.model.service.UserService;
 
 @Controller
-public class UserControler {
+public class UserController {
 
     @Autowired
     private UserService service;
@@ -35,5 +36,4 @@ public class UserControler {
 //        service.deleteUser(user);
 //        return "index";
     //  }
-}
 }

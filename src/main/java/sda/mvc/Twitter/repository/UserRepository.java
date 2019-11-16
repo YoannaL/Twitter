@@ -1,7 +1,8 @@
 package sda.mvc.Twitter.repository;
 
 
-import sda.mvc.Twitter.Twitter.model.User;
+import org.springframework.data.jpa.repository.JpaRepository;
+import sda.mvc.Twitter.model.entity.User;
 
 public interface UserRepository extends JpaRepository<User, Long> {
 }

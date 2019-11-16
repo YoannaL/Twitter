@@ -1,5 +1,6 @@
 package sda.mvc.Twitter.model.service;
 
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import sda.mvc.Twitter.model.dto.UserDTO;
@@ -10,8 +11,10 @@ import java.util.Date;
 import java.util.List;
 import java.util.stream.Collectors;
 @Service
-public class UserService {   @Autowired
-private ModelMapper mapper;
+public class UserService {
+
+    @Autowired
+    private ModelMapper mapper;
 
     @Autowired
     private UserRepository userRepository;
@@ -40,7 +43,7 @@ private ModelMapper mapper;
                 .collect(Collectors.toList());
     }
     public void deleteUser(UserDTO userDto){
-        userRepository.delete(userDTO.getId());
+        userRepository.deleteById(userDto.getId());
     }
 
 }
