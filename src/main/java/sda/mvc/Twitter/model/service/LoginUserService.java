@@ -2,17 +2,20 @@ package sda.mvc.Twitter.model.service;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 import org.springframework.validation.BindingResult;
 import sda.mvc.Twitter.model.dto.LoginUserDTO;
 import sda.mvc.Twitter.model.entity.LoginUser;
 import sda.mvc.Twitter.repository.LoginUserRepository;
+//import sda.mvc.Twitter.validation.BindingValidator;
 
 @Service
 public class LoginUserService {
 
-//    @Autowired
-//    private PasswordEncoder bCryptPasswordEndcoder;
+    @Autowired
+    private PasswordEncoder bCryptPasswordEndcoder;
 
     @Autowired
     private LoginUserRepository loginUserRepository;
@@ -39,7 +42,7 @@ public class LoginUserService {
 //        LoginUser loginUser = mapper.map(loginUserDto, LoginUser.class);
 //        loginUser.setPassword(hash);
 //        loginUserRepository.save(loginUser);
-
+//
 //    }
 
     private void validateLoginUser(LoginUserDTO loginUserDto) {
@@ -52,13 +55,13 @@ public class LoginUserService {
         return loginUserRepository.countByLogin(loginUserDto.getLogin()) > 0;
     }
 
-//    private boolean CheckAuthorities(LoginUserDTO loginUserDto) {
-//        return SecurityContextHolder
-//                .getContext()
-//                .getAuthentication()
-//                .getAuthorities()
-//                .toArray()[0]
-//                .toString()
-//                .equals(loginUserDto.getRole());
-//    }
+    private boolean CheckAuthorities(LoginUserDTO loginUserDto) {
+        return SecurityContextHolder
+                .getContext()
+                .getAuthentication()
+                .getAuthorities()
+                .toArray()[0]
+                .toString()
+                .equals(loginUserDto.getRole());
+    }
 }
