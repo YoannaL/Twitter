@@ -2,20 +2,18 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-
-    <title>Twitter</title>
+    <title>Witaj w pierwszej aplikacji</title>
+    <center><img src="https://img.icons8.com/cute-clipart/64/000000/twitter.png"></center>
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
-
     <link type="text/css"
           rel="stylesheet"
           href="../static/css/style.css"
           th:href="@{/css/style.css}"/>
 </head>
-
 <body>
-
-<h1>Twitter</h1>
+<center><h1>Witaj na Twitterze</h1></center>
+<ion-icon name="logo-twitter"></ion-icon>
 
 <section class="container">
     <div class="left-half">
@@ -28,10 +26,10 @@
         <article>
             <h1>Dołącz do Twittera</h1>
             <p><form action="/adduser">
-            <button type="button" class="btn btn-primary btn-lg btn-block">Log in</button>
+            <button type="button" class="btn btn-primary btn-lg btn-block">Zaloguj</button>
         </form>
             <form action="/addloginuser">
-                <button type="button" class="btn btn-secondary btn-lg btn-block">Register</button>
+                <button type="button" class="btn btn-secondary btn-lg btn-block">Zarekestruj</button>
             </form></p>
         </article>
     </div>
