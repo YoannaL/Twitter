@@ -2,7 +2,7 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8"/>
-    <title>Witaj w pierwszej aplikacji</title>
+    <title>Witaj na Twitterze</title>
     <center><img src="https://img.icons8.com/cute-clipart/64/000000/twitter.png"></center>
     <link rel="stylesheet"
           href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"/>
@@ -12,27 +12,25 @@
           th:href="@{/css/style.css}"/>
 </head>
 <body>
-<center><h1>Witaj na Twitterze</h1></center>
-<ion-icon name="logo-twitter"></ion-icon>
+<div class="jumbotron">
+    <center><h1 class="display-4">Witaj na Twitterze</h1></center>
+    <ion-icon name="logo-twitter"></ion-icon>
+    <center><p class="lead"> Dodawaj posty, komentuj, poznawaj nowych przyjaciół</p>
+    </center>
+    <hr class="my-4">
+    <center><p>Jesteś nowym użytkownikiem? Wybierz "Zarejestruj". Jeśli masz konto, wybierz "Zaloguj"</p>
+    </center>
+    <p>
+    <form action="/adduser"></form>
+    </p>
+  <center>  <a class="btn btn-primary btn-lg btn-block" href="#" role="button" style="width: 350px; height: 45px">Zarejestruj</a>
 
-<section class="container">
-    <div class="left-half">
-        <article>
-            <h1></h1>
-            <p></p>
-        </article>
-    </div>
-    <div class="right-half">
-        <article>
-            <h1>Dołącz do Twittera</h1>
-            <p><form action="/adduser">
-            <button type="button" class="btn btn-primary btn-lg btn-block">Zaloguj</button>
-        </form>
-            <form action="/addloginuser">
-                <button type="button" class="btn btn-secondary btn-lg btn-block">Zarejestruj</button>
-            </form></p>
-        </article>
-    </div>
-</section>
+    <p>
+    <form action="/addloginuser"></form>
+    </p>
+    <a class="btn btn-info btn-lg btn-block " href="#" role="button" style="width: 350px; height: 45px">Zaloguj</a>
+  </center>
+</div>
+
 </body>
 </html>
